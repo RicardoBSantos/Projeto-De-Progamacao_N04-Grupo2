@@ -2,6 +2,7 @@ package com.example.ProjetoProgamacao2.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Collection;
 
 @Entity
 @Table(name = "organizacoes")
@@ -37,4 +38,8 @@ public class Organizacao {
 
     public LocalDateTime getCriadoEm() { return criadoEm; }
     public void setCriadoEm(LocalDateTime criadoEm) { this.criadoEm = criadoEm; }
+    public Collection<Evento> getUsuarios() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getUsuarios'");
+    }
 }

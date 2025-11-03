@@ -25,8 +25,9 @@ public class Evento {
     @Column(nullable=false)
     private LocalDateTime fim;
 
-    @Column(nullable=false)
-    private String local;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "local_id", nullable = false)
+    private Local local;
 
     @Column(nullable=false)
     private Integer limiteVagas;
@@ -58,8 +59,8 @@ public class Evento {
     public LocalDateTime getFim() { return fim; }
     public void setFim(LocalDateTime fim) { this.fim = fim; }
 
-    public String getLocal() { return local; }
-    public void setLocal(String local) { this.local = local; }
+    public Local getLocal() { return local; }
+    public void setLocal(Local local) { this.local = local; }
 
     public Integer getLimiteVagas() { return limiteVagas; }
     public void setLimiteVagas(Integer limiteVagas) { this.limiteVagas = limiteVagas; }
@@ -72,5 +73,9 @@ public class Evento {
 
     public LocalDateTime getCriadoEm() { return criadoEm; }
     public void setCriadoEm(LocalDateTime criadoEm) { this.criadoEm = criadoEm; }
+    public Object getPapel() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPapel'");
+    }
 }
 
