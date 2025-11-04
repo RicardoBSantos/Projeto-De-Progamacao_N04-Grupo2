@@ -38,8 +38,14 @@ public class Organizacao {
 
     public LocalDateTime getCriadoEm() { return criadoEm; }
     public void setCriadoEm(LocalDateTime criadoEm) { this.criadoEm = criadoEm; }
-    public Collection<Evento> getUsuarios() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUsuarios'");
+    @OneToMany(mappedBy = "organizacao", fetch = FetchType.LAZY)
+    private Collection<Usuario> usuarios;
+    
+    public Collection<Usuario> getUsuarios() {
+        return usuarios;
+    }
+    
+    public void setUsuarios(Collection<Usuario> usuarios) {
+        this.usuarios = usuarios;
     }
 }
