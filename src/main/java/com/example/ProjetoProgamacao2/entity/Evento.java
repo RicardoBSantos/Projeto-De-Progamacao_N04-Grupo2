@@ -2,8 +2,6 @@ package com.example.ProjetoProgamacao2.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "eventos")
@@ -26,7 +24,7 @@ public class Evento {
     private LocalDateTime fim;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "local_id", nullable = false)
+    @JoinColumn(name = "local_id", nullable = true)
     private Local local;
 
     @Column(nullable=false)
@@ -35,15 +33,13 @@ public class Evento {
     @ManyToOne(fetch = FetchType.LAZY)
     private Organizacao organizacao;
 
-    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-    @JoinTable(name = "evento_categorias",
-            joinColumns = @JoinColumn(name = "evento_id"),
-            inverseJoinColumns = @JoinColumn(name = "categoria_id"))
-    private Set<Categoria> categorias = new HashSet<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
 
     private LocalDateTime criadoEm = LocalDateTime.now();
 
-    // Getters e Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -68,14 +64,10 @@ public class Evento {
     public Organizacao getOrganizacao() { return organizacao; }
     public void setOrganizacao(Organizacao organizacao) { this.organizacao = organizacao; }
 
-    public Set<Categoria> getCategorias() { return categorias; }
-    public void setCategorias(Set<Categoria> categorias) { this.categorias = categorias; }
+    public Categoria getCategoria() { return categoria; }
+    public void setCategoria(Categoria categoria) { this.categoria = categoria; }
 
     public LocalDateTime getCriadoEm() { return criadoEm; }
     public void setCriadoEm(LocalDateTime criadoEm) { this.criadoEm = criadoEm; }
-    public Object getPapel() {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'getPapel'");
-    }
 }
 

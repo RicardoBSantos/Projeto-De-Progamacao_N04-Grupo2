@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.novaaurora.events.controller.EventFormController"
+          hgap="10" vgap="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="30" />
+        <ColumnConstraints percentWidth="70" />
+    </columnConstraints>
+
+    <Label text="Nome" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+    <TextField fx:id="txtName" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+    <Label text="Descrição" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextArea fx:id="txtDescription" prefRowCount="3" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+    <Label text="Categoria" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <ComboBox fx:id="comboCategory" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+    <Label text="Data de Início" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+    <DatePicker fx:id="dateStart" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+    <Label text="Data de Término" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <DatePicker fx:id="dateEnd" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+    <Label text="Limite de Vagas" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+    <TextField fx:id="txtSeats" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+    <Label text="Organizador" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+    <TextField fx:id="txtOrganizer" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+
+    <Label text="Autorizado" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+    <CheckBox fx:id="chkAuthorized" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+    <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.rowIndex="8" GridPane.columnIndex="1">
+        <Button text="Salvar" onAction="#onSave" />
+        <Button text="Cancelar" onAction="#onCancel" />
+    </HBox>
+</GridPane>

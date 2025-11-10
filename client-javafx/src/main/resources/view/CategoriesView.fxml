@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.novaaurora.events.controller.CategoriesController">
+    <top>
+        <ToolBar>
+            <TextField fx:id="txtNewCategory" promptText="Nome da Nova Categoria" />
+            <Button text="Adicionar" onAction="#onAddCategory" />
+            <Button text="Excluir" onAction="#onDeleteCategory" />
+            <Button text="Atualizar" onAction="#onUpdateCategory" />
+            </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="categoriesTable">
+            <columns>
+                <TableColumn fx:id="colCatName" text="Nome" prefWidth="300" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

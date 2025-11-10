@@ -23,7 +23,7 @@ public class Usuario {
     @JoinColumn(name = "organizacao_id")
     private Organizacao organizacao;
 
-    // Getters e Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

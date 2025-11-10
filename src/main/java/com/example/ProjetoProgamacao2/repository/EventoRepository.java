@@ -13,17 +13,17 @@ import java.util.List;
 @Repository
 public interface EventoRepository extends JpaRepository<Evento, Long> {
     
-    // Advanced filtered search by name, category OR start date
-    @Query("SELECT e FROM Evento e LEFT JOIN e.categorias c WHERE " +
+    
+    @Query("SELECT e FROM Evento e WHERE " +
            "(:titulo IS NULL OR LOWER(e.titulo) LIKE LOWER(CONCAT('%', :titulo, '%'))) AND " +
-           "(:categoriaId IS NULL OR c.id = :categoriaId) AND " +
+           "(:categoriaId IS NULL OR e.categoria.id = :categoriaId) AND " +
            "(:dataInicio IS NULL OR e.inicio >= :dataInicio)")
     List<Evento> findByFilters(
             @Param("titulo") String titulo,
             @Param("categoriaId") Long categoriaId,
             @Param("dataInicio") LocalDateTime dataInicio);
     
-    // Find events that overlap with a given time period at a specific location
+    
     @Query("SELECT e FROM Evento e WHERE e.local = :local AND " +
            "e.id <> :eventoId AND " +
            "e.inicio <= :dataFim AND e.fim >= :dataInicio")

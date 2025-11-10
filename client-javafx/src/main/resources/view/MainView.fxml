@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.novaaurora.events.controller.MainController">
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab text="Eventos">
+                <content>
+                    <StackPane>
+                        <fx:include source="EventsView.fxml"/>
+                    </StackPane>
+                </content>
+            </Tab>
+            <Tab text="Categorias">
+                <content>
+                    <StackPane>
+                        <fx:include source="CategoriesView.fxml"/>
+                    </StackPane>
+                </content>
+            </Tab>
+            <Tab text="Organizadores">
+                <content>
+                    <StackPane>
+                        <fx:include source="OrganizationsView.fxml"/>
+                    </StackPane>
+                </content>
+            </Tab>
+            <Tab text="Relatórios">
+                <content>
+                    <StackPane>
+                        <fx:include source="ReportsView.fxml"/>
+                    </StackPane>
+                </content>
+            </Tab>
+            <Tab text="Avaliação">
+                <content>
+                    <StackPane>
+                        <fx:include source="FeedbackView.fxml"/>
+                    </StackPane>
+                </content>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,23 @@
+/* Basic, clean styling for the application */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.heading {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #2d89ef;
+    -fx-text-fill: white;
+}
+
+.tool-bar {
+    -fx-background-color: #f0f0f0;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+}

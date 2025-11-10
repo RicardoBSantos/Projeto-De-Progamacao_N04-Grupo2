@@ -3,6 +3,9 @@ package com.example.ProjetoProgamacao2.controller;
 import com.example.ProjetoProgamacao2.entity.Evento;
 import com.example.ProjetoProgamacao2.service.EventoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.PropertyValueException;
+import org.hibernate.TransientObjectException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -58,6 +61,23 @@ public class EventoController {
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<String> handleIllegalStateException(IllegalStateException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+    
+    
+    @ExceptionHandler(PropertyValueException.class)
+    public ResponseEntity<String> handlePropertyValueException(PropertyValueException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<String> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+    
+    @ExceptionHandler(TransientObjectException.class)
+    public ResponseEntity<String> handleTransientObjectException(TransientObjectException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body("Entidade relacionada não persistida: " + ex.getMessage());
     }
     
     @ExceptionHandler(RuntimeException.class)

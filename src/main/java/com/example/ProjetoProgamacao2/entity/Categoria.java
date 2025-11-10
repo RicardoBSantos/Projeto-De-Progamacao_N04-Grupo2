@@ -15,7 +15,7 @@ public class Categoria {
     @Column(nullable=false, unique=true)
     private String nome;
 
-    @ManyToMany(mappedBy = "categorias")
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private Set<Evento> eventos = new HashSet<>();
 
     public Long getId() { return id; }

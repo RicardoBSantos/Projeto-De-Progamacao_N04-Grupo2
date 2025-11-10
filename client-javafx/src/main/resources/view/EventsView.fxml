@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.novaaurora.events.controller.EventsController">
+    <top>
+        <ToolBar>
+            <Button text="Adicionar Evento" onAction="#onAddEvent"/>
+            <Button text="Editar" onAction="#onEditEvent"/>
+            <Button text="Excluir" onAction="#onDeleteEvent"/>
+            <Separator/>
+            <Label text="Categoria:"/>
+            <ComboBox fx:id="categoryFilter" prefWidth="200" onAction="#onFilterByCategory"/>
+            <Button text="Atualizar" onAction="#onRefresh"/>
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="eventsTable">
+            <columns>
+                <TableColumn fx:id="colTitle" text="Nome" prefWidth="250" />
+                <TableColumn fx:id="colCategory" text="Categoria" prefWidth="150" />
+                <TableColumn fx:id="colStart" text="Data de Início" prefWidth="180" />
+                <TableColumn fx:id="colEnd" text="Data de Término" prefWidth="180" />
+                <TableColumn fx:id="colSeats" text="Vagas Disponíveis" prefWidth="140" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

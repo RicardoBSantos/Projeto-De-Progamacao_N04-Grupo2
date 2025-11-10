@@ -24,7 +24,7 @@ public class Local {
     @OneToMany(mappedBy = "local", cascade = CascadeType.ALL)
     private Set<Evento> eventos = new HashSet<>();
 
-    // Getters e Setters
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
