@@ -159,7 +159,8 @@ Estrutura do repositório:
 - `client-javafx/src/main/resources/...` — FXML e CSS
 
 Builds e testes:
-- Backend: `mvn package`
+- Backend: `mvn package`<img width="479" height="761" alt="hLHTQuCm57qN_0-XBuE1PNijsrYmCeHMYtPxsDibtfKB9YanZj6n_xvObLPfzyNobDnxJiuvyU9zPS7OMfQ-Ty5kcyMYv77PRdqFLItP5hPOFbOr6DBitVUOMto-Z9DscsOFF8cVUSZJjh3YsJeEunLFrj4GCaypt_lmlODOkE1v7kLibSL9GudpNjhtH0bLnKAmkD66e9SEs4Ah3" src="https://github.com/user-attachments/assets/b4d5eaa9-0317-41ef-b47b-4d612029a457" />
+
 - Cliente: `mvn -pl client-javafx -am javafx:run`
 - Testes de UI (TestFX) estão desabilitados por padrão e exigem ambiente headless configurado
 
@@ -168,6 +169,11 @@ Estilo e segurança:
 - Handlers de exceção no `EventoController` para respostas amigáveis ao cliente
 
 ---
+
+
+![diagrama de classes](https://github.com/user-attachments/assets/854576f5-dae2-4b07-9e54-cccba700463d)
+
+
 
 ## Equipe
 
