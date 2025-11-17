@@ -169,7 +169,7 @@ Estilo e segurança:
 - Handlers de exceção no `EventoController` para respostas amigáveis ao cliente
 
 ---
-
+## Diagrama de Classes:
 
 ![diagrama de classes](https://github.com/user-attachments/assets/854576f5-dae2-4b07-9e54-cccba700463d)
 
