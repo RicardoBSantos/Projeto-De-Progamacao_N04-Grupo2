@@ -173,6 +173,40 @@ Estilo e segurança:
 
 ![diagrama de classes](https://github.com/user-attachments/assets/854576f5-dae2-4b07-9e54-cccba700463d)
 
+## Demonstração com print do funcionamento do sistema
+
+### Tela inicial
+
+![Captura de tela 2025-11-17 213824](https://github.com/user-attachments/assets/b35ae202-e275-4b52-b051-4400f7f74c16)
+
+### Criação de um Evento
+
+![Captura de tela 2025-11-17 214011](https://github.com/user-attachments/assets/cbc79f7f-efc0-4c13-841e-6bc21eb05cae)
+
+#### Evento criado e adcionado na tela inicial
+
+![Captura de tela 2025-11-17 213952](https://github.com/user-attachments/assets/d75f5d7f-8532-4c25-85bf-343b185f4b79)
+
+
+### Editar um evento
+
+![Captura de tela 2025-11-17 214044](https://github.com/user-attachments/assets/38442dbc-d81b-4e85-aa99-ee9f7b40374f)
+
+### Excluir um evento
+
+![Captura de tela 2025-11-17 214105](https://github.com/user-attachments/assets/6b304e03-1823-4011-b007-9e47db1dac25)
+
+### Avaliação de eventos
+
+![Captura de tela 2025-11-17 214129](https://github.com/user-attachments/assets/2233a083-5c2b-4730-a261-470e0fdf1dbf)
+
+### Relatórios
+
+![Captura de tela 2025-11-17 214142](https://github.com/user-attachments/assets/e769461e-4b43-44e3-8c52-b997854d5293)
+
+### categorias
+
+![Captura de tela 2025-11-17 214152](https://github.com/user-attachments/assets/ff9e13dd-221b-4a46-8af0-a24cf42921c0)
 
 
 ## Equipe
